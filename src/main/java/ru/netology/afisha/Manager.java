@@ -5,12 +5,14 @@ public class Manager {
     private AfishaFilm[] films = new AfishaFilm[0];
     private int maxFilms;
 
-    public  Manager() {
+    public Manager() {
         maxFilms = 10;
     }
-    public  Manager(int quantity) {
+
+    public Manager(int quantity) {
         maxFilms = quantity;
     }
+
     public void add(AfishaFilm film) {
         AfishaFilm[] tmp = new AfishaFilm[films.length + 1];
         for (int i = 0; i < films.length; i++) {
@@ -22,7 +24,7 @@ public class Manager {
 
     public AfishaFilm[] findAll() {
         return films;
-        }
+    }
 
     public AfishaFilm[] findLast() {
         int resultLength;
@@ -32,9 +34,9 @@ public class Manager {
             resultLength = films.length;
         }
 
-         AfishaFilm[] result = new AfishaFilm[resultLength];
+        AfishaFilm[] result = new AfishaFilm[resultLength];
         for (int i = 0; i < resultLength; i++) {
-            result[i] = films[films.length - 1 -i];
+            result[i] = films[films.length - 1 - i];
         }
         return result;
     }
